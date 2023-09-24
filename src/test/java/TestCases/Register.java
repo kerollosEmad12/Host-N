@@ -24,11 +24,8 @@ public class Register extends TestBase{
     public void InvalidData(String firstName, String LastName)
     {
        home = new P01HomePage(driver);
-       register = new P02RegistrationPage(driver);
+       register = new P02RegistrationPage(driver, null);
 
-       // user should wait while page loading
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.elementToBeClickable(By.className("sign__up")));
 
         // user click on signup button
        home.registerBtn();
@@ -68,11 +65,8 @@ public class Register extends TestBase{
     public void invalidData(String phone)
     {
         home = new P01HomePage(driver);
-        register = new P02RegistrationPage(driver);
+        register = new P02RegistrationPage(driver, null);
 
-        // user should wait while page loading
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.elementToBeClickable(By.className("sign__up")));
 
         // user click on signup button
         home.registerBtn();
@@ -104,11 +98,9 @@ public class Register extends TestBase{
     public void InvalidDataEmail (String Email)
     {
         home = new P01HomePage(driver);
-        register = new P02RegistrationPage(driver);
+        register = new P02RegistrationPage(driver, null);
 
-        // user should wait while page loading
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.elementToBeClickable(By.className("sign__up")));
+
 
         // user click on signup button
         home.registerBtn();
@@ -147,7 +139,7 @@ public class Register extends TestBase{
     public void InvalidPasswordAndConfirmPass (String pass, String confirmPass)
     {
         home = new P01HomePage(driver);
-        register = new P02RegistrationPage(driver);
+        register = new P02RegistrationPage(driver, null);
 
         // user should wait while page loading
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));

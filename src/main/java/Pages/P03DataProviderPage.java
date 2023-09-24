@@ -77,4 +77,13 @@ public class P03DataProviderPage {
                         {"01033584776","123@asda"}
                 };
     }
+
+    @DataProvider (name = "Enter Phone Number and Password for reserve")
+    public static Object [] [] reserveData ()
+    {
+        return new Object[][]
+                {
+                        {"01033584776", "123456789"}
+                };
+    }
 }

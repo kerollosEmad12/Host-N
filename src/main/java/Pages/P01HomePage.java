@@ -16,6 +16,6 @@ public class P01HomePage {
     public P02RegistrationPage registerBtn()
     {
        driver.findElement(registerTab).click();
-       return new P02RegistrationPage(driver);
+       return new P02RegistrationPage(driver, null);
     }
 }

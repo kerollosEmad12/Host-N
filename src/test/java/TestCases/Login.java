@@ -19,7 +19,7 @@ public class Login extends TestBase{
     @Test (dataProvider = "invalid phone number and invalid password", dataProviderClass = P03DataProviderPage.class)
     public void InvalidNumberAndPass (String phone, String pass)
     {
-        SignIn = new P04LoginPage(driver);
+        SignIn = new P04LoginPage(driver, null);
         // user should wait while page loading
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@href=\"https://host-n.com/login\"]")));

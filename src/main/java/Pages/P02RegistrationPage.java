@@ -9,7 +9,10 @@ import java.time.Duration;
 
 public class P02RegistrationPage {
 
+    // Add Driver
     private WebDriver driver;
+
+    //To Create Constructor For Waiting
     private  int timeout=30;
     private WebDriverWait wait;
     public P02RegistrationPage(WebDriver driver, By selector)
@@ -21,6 +24,7 @@ public class P02RegistrationPage {
         }
     }
 
+    // To Adding Locators
     private By firstname = By.cssSelector("input[name=\"first_name\"]");
     public P02RegistrationPage EnterFirstName (String fName)
     {

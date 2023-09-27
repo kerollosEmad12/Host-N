@@ -4,8 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class P01HomePage {
+    // Add Driver
     private WebDriver driver;
 
+    // To Adding Locators
     public P01HomePage(WebDriver driver)
     {
         this.driver = driver;

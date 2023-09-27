@@ -4,6 +4,7 @@ import org.testng.annotations.DataProvider;
 
 public class P03DataProviderPage {
 
+    // To Invalid First Name And Last Name Data
     @DataProvider (name = "invalid first name and last name")
     public static Object [] [] Data ()
     {
@@ -17,6 +18,8 @@ public class P03DataProviderPage {
         };
     }
 
+
+    // To Invalid Phone Number Data
     @DataProvider (name = "Invalid phone number")
     public static Object [] [] data ()
     {
@@ -29,6 +32,7 @@ public class P03DataProviderPage {
                 };
     }
 
+    // To Invalid E-mail Data
     @DataProvider (name = "Invalid Email")
     public static Object [] [] NewData ()
     {
@@ -44,6 +48,7 @@ public class P03DataProviderPage {
                 };
     }
 
+    // To Invalid Password And Confirm Password Data
     @DataProvider (name = "invalid password and confirmPassword")
     public static Object [] [] InvalidData ()
     {
@@ -60,6 +65,7 @@ public class P03DataProviderPage {
                 };
     }
 
+    // To Invalid Phone Number And Password Data (Login)
     @DataProvider (name = "invalid phone number and invalid password")
     public static Object [] [] invalidPhoneAndPassData ()
     {
@@ -78,6 +84,7 @@ public class P03DataProviderPage {
                 };
     }
 
+    // To Enter Login Data To Reserve Unit
     @DataProvider (name = "Enter Phone Number and Password for reserve")
     public static Object [] [] reserveData ()
     {

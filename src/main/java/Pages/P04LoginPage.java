@@ -8,8 +8,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class P04LoginPage {
+
+    // Add Driver
     private WebDriver driver;
 
+    //To Create Constructor For Waiting
     private  int timeout=30;
     private WebDriverWait wait;
 
@@ -22,6 +25,8 @@ public class P04LoginPage {
         }
     }
 
+    // To Adding Locators
+    // To Define Locator Method
     private By loginTab = By.xpath("//*[@href=\"https://host-n.com/login\"]");
     public P04LoginPage LoginBtn ()
     {

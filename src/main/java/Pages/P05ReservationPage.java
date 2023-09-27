@@ -11,7 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class P05ReservationPage {
+    // Add Driver
     private WebDriver driver;
+
+    //To Create Constructor For Waiting
     private WebDriverWait wait;
     private static final int TIMEOUT = 30;
 
@@ -20,6 +23,7 @@ public class P05ReservationPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
     }
 
+    // To Adding Locators
     private void scrollToAndClick(By locator) {
         WebElement element = driver.findElement(locator);
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -69,14 +73,14 @@ public class P05ReservationPage {
         return this;
     }
 
-    private By dateDayForm = By.cssSelector("div[class=\"drp-calendar left\"] td[data-title=\"r3c4\"]");
+    private By dateDayForm = By.cssSelector("div[class=\"drp-calendar right\"] td[data-title=\"r2c1\"]");
 
     public P05ReservationPage dayForm() {
         scrollToAndClick(dateDayForm);
         return this;
     }
 
-    private By dateDayTo = By.cssSelector("div[class=\"drp-calendar right\"] td[data-title=\"r0c5\"]");
+    private By dateDayTo = By.cssSelector("div[class=\"drp-calendar right\"] td[data-title=\"r4c4\"]");
 
     public P05ReservationPage dayTo() {
         scrollToAndClick(dateDayTo);

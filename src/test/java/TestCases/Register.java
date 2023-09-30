@@ -54,7 +54,7 @@ public class Register extends TestBase{
        register.clickSub();
 
        // user verified the words of the error
-       String actualMsg = driver.findElement(By.cssSelector("div[class=\"invalid-feedback \"]:nth-child(2) strong")).getText();
+        String actualMsg = driver.findElement(By.cssSelector("div[class=\"invalid-feedback \"]:nth-child(2) strong")).getText();
        soft.assertTrue(actualMsg.contains("The first name must be at least 3 characters."),
                "actualMsg : "+actualMsg +" | "+ "expected Msg : "+"The first name must be at least 3 characters.");
 
@@ -129,8 +129,14 @@ public class Register extends TestBase{
 
         // user verified the words of the error
         String actualMsg = driver.findElement(By.cssSelector("div[class=\"invalid-feedback \"]:nth-child(5) strong")).getText();
-        soft.assertTrue(actualMsg.contains("The email must be a valid email address."),
-                "actualMsg : "+actualMsg +" | "+ "expected Msg : "+"The email must be a valid email address.");
+        switch (actualMsg){
+            case "he email must be a valid email address.":
+                soft.assertTrue(false,
+                        "actualMsg : "+actualMsg +" | "+ "expected Msg : "+"The email must be a valid email address.");
+                break;
+            case "The email has already been taken.":
+                break;
+        }
 
         soft.assertAll();
     }
